@@ -458,7 +458,7 @@ export default function Home() {
           
           <div className="text-[10px] text-gray-400 flex items-center gap-1 border-t border-gray-100 dark:border-slate-800 pt-2">
             <Info className="w-3 h-3 shrink-0" />
-            <span>Stitched coordinates: 32,256 x 39,312</span>
+            <span>Stitched coordinates: 32,256 x 51,408</span>
           </div>
         </div>
       </div>

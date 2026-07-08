@@ -71,6 +71,7 @@ def generate_map_data():
     ]
 
     # Detailed Road Networks - aligned tile-by-tile in the new mixed grid layout!
+    # Consistent 3-corridor structure: Left corridor (x=800), Center Freeway (x=1512), Right corridor (x=2200)
     roads = [
         # --- FREEWAY BACKBONE (Mommy Ave) ---
         # Starts bottom of Tile 1, runs North at x=1512 to Tile 11, then East at y=1512 to Tile 18
@@ -80,23 +81,27 @@ def generate_map_data():
             "type": "freeway",
             "points": [
                 { "x": 1512, "y": 51408, "description": "Mommy Ave entrance at South Harbor" },
-                { "x": 1512, "y": 49400, "description": "Pass Shila Town Center intersection" },
+                { "x": 1512, "y": 50800, "description": "Exit 1: Chana Rochel" },
+                { "x": 1512, "y": 49400, "description": "Exit 2: City of Shira" },
                 { "x": 1512, "y": 47376, "description": "Boundary Tile 1/2" },
-                { "x": 1512, "y": 45144, "description": "Exit 4: Happy St / Peace Ave" },
+                { "x": 1512, "y": 46000, "description": "Exit 3: Peace Ave" },
+                { "x": 1512, "y": 45144, "description": "Exit 4: Happy St / The White House" },
                 { "x": 1512, "y": 43344, "description": "Boundary Tile 2/3" },
-                { "x": 1512, "y": 41328, "description": "Exit 6: Tatty Ave / Shobbos Ave" },
+                { "x": 1512, "y": 42000, "description": "Exit 5: Tatty Ave" },
+                { "x": 1512, "y": 41328, "description": "Exit 6: Shobbos Ave" },
                 { "x": 1512, "y": 39312, "description": "Boundary Tile 3/4" },
-                { "x": 1512, "y": 37280, "description": "Exit 8: River Road / Forest Route" },
+                { "x": 1512, "y": 37280, "description": "Exit 8: Shobbos Blvd" },
+                { "x": 1512, "y": 36000, "description": "Exit 9: Harbor Bay Cross Harbor" },
                 { "x": 1512, "y": 35280, "description": "Boundary Tile 4/5" },
-                { "x": 1512, "y": 33264, "description": "Jungle Crossroads" },
+                { "x": 1512, "y": 33264, "description": "Exit 10: Jungle Path" },
                 { "x": 1512, "y": 31248, "description": "Boundary Tile 5/6" },
-                { "x": 1512, "y": 29216, "description": "Exit 10: Volcano Path" },
+                { "x": 1512, "y": 29216, "description": "Exit 11: Volcano Rd" },
                 { "x": 1512, "y": 27216, "description": "Boundary Tile 6/7" },
-                { "x": 1512, "y": 25184, "description": "Exit 12: Midpoint Bridge" },
+                { "x": 1512, "y": 25184, "description": "Exit 12: Midpoint Bridge / Internet Ave" },
                 { "x": 1512, "y": 23184, "description": "Boundary Tile 7/8-1" },
-                { "x": 1512, "y": 21100, "description": "Exit 13: Yitzhok Ave / Playland" },
+                { "x": 1512, "y": 21100, "description": "Exit 13: Disneyland 1st Entrance" },
                 { "x": 1512, "y": 19152, "description": "Boundary Tile 8-1/8-2" },
-                { "x": 1512, "y": 17136, "description": "Exit 14: Fishing Area" },
+                { "x": 1512, "y": 17136, "description": "Exit 14: City of Yitzhok / Playland" },
                 { "x": 1512, "y": 15120, "description": "Boundary Tile 8-2/8-3" },
                 { "x": 1512, "y": 11088, "description": "Boundary Tile 8-3/9" },
                 { "x": 1512, "y": 9072, "description": "Exit 15: Disney St / EM Station" },
@@ -104,7 +109,7 @@ def generate_map_data():
                 { "x": 1512, "y": 5000, "description": "Exit 16: Park Village" },
                 { "x": 1512, "y": 3024, "description": "Boundary Tile 10/11" },
                 # Turn East at North Intersection (Tile 11)
-                { "x": 1512, "y": 1512, "description": "At North Intersection (Exit 18), turn East (right)" },
+                { "x": 1512, "y": 1512, "description": "Exit 18: Thomas Barrel Park" },
                 { "x": 4032, "y": 1512, "description": "Boundary Tile 11/12" },
                 { "x": 6000, "y": 1512, "description": "Exit 19: Blomns Stadium" },
                 { "x": 8064, "y": 1512, "description": "Boundary Tile 12/13" },
@@ -117,25 +122,186 @@ def generate_map_data():
             ]
         },
 
-        # --- TILE 1 LOCAL ROADS (Shila City Grid) ---
+        # --- LEFT CORRIDOR (Peace-Tatty-Misnoyos-Disney Corridor, x=800) ---
+        # Continuous road running north-south through the left side of the map
         {
-            "id": "shila-ave",
-            "name": "Shila Ave",
+            "id": "left-corridor-1",
+            "name": "Peace Ave",
             "type": "local",
             "points": [
-                { "x": 2000, "y": 51408 },
-                { "x": 2000, "y": 49400, "description": "Cross Playing Rd" },
-                { "x": 2000, "y": 47376 }
+                { "x": 800, "y": 51408 },
+                { "x": 800, "y": 47376 },
+                { "x": 800, "y": 43344 }
             ]
         },
+        {
+            "id": "left-corridor-2",
+            "name": "Tatty Ave",
+            "type": "local",
+            "points": [
+                { "x": 800, "y": 43344 },
+                { "x": 800, "y": 39312 }
+            ]
+        },
+        {
+            "id": "left-corridor-3",
+            "name": "Forest Ave",
+            "type": "local",
+            "points": [
+                { "x": 800, "y": 39312 },
+                { "x": 800, "y": 35280 }
+            ]
+        },
+        {
+            "id": "left-corridor-4",
+            "name": "Jungle Path",
+            "type": "local",
+            "points": [
+                { "x": 800, "y": 35280 },
+                { "x": 800, "y": 27216 }
+            ]
+        },
+        {
+            "id": "left-corridor-5",
+            "name": "Misnoyos Ave",
+            "type": "local",
+            "points": [
+                { "x": 800, "y": 27216 },
+                { "x": 800, "y": 23184 }
+            ]
+        },
+        {
+            "id": "left-corridor-6",
+            "name": "Disneyland Way",
+            "type": "local",
+            "points": [
+                { "x": 800, "y": 23184 },
+                { "x": 800, "y": 11088 }
+            ]
+        },
+        {
+            "id": "left-corridor-7",
+            "name": "Disney St",
+            "type": "local",
+            "points": [
+                { "x": 800, "y": 11088 },
+                { "x": 800, "y": 7056 }
+            ]
+        },
+        {
+            "id": "left-corridor-8",
+            "name": "Park Village Rd",
+            "type": "local",
+            "points": [
+                { "x": 800, "y": 7056 },
+                { "x": 800, "y": 3024 }
+            ]
+        },
+
+        # --- RIGHT CORRIDOR (Chana Rochel-Shira-Ephraim-Shobbos-Internet-Yitzhok Corridor, x=2200) ---
+        # Continuous road running north-south through the right side of the map
+        {
+            "id": "right-corridor-1a",
+            "name": "Chana Rochel Ave",
+            "type": "local",
+            "points": [
+                { "x": 2200, "y": 51408 },
+                { "x": 2200, "y": 49400 }
+            ]
+        },
+        {
+            "id": "right-corridor-1b",
+            "name": "Shira Ave",
+            "type": "local",
+            "points": [
+                { "x": 2200, "y": 49400 },
+                { "x": 2200, "y": 47376 }
+            ]
+        },
+        {
+            "id": "right-corridor-2",
+            "name": "Ephraim Ave",
+            "type": "local",
+            "points": [
+                { "x": 2200, "y": 47376 },
+                { "x": 2200, "y": 43344 }
+            ]
+        },
+        {
+            "id": "right-corridor-3",
+            "name": "Shobbos Blvd",
+            "type": "local",
+            "points": [
+                { "x": 2200, "y": 43344 },
+                { "x": 2200, "y": 35280 }
+            ]
+        },
+        {
+            "id": "right-corridor-4",
+            "name": "Jungle Way",
+            "type": "local",
+            "points": [
+                { "x": 2200, "y": 35280 },
+                { "x": 2200, "y": 27216 }
+            ]
+        },
+        {
+            "id": "right-corridor-5",
+            "name": "Internet Ave",
+            "type": "local",
+            "points": [
+                { "x": 2200, "y": 27216 },
+                { "x": 2200, "y": 23184 }
+            ]
+        },
+        {
+            "id": "right-corridor-6",
+            "name": "Yitzhok Ave",
+            "type": "local",
+            "points": [
+                { "x": 2200, "y": 23184 },
+                { "x": 2200, "y": 19152 }
+            ]
+        },
+        {
+            "id": "right-corridor-7",
+            "name": "Yitzhok Way",
+            "type": "local",
+            "points": [
+                { "x": 2200, "y": 19152 },
+                { "x": 2200, "y": 11088 }
+            ]
+        },
+        {
+            "id": "right-corridor-8",
+            "name": "Chocolate Way",
+            "type": "local",
+            "points": [
+                { "x": 2200, "y": 11088 },
+                { "x": 2200, "y": 7056 }
+            ]
+        },
+        {
+            "id": "right-corridor-9",
+            "name": "Park East Rd",
+            "type": "local",
+            "points": [
+                { "x": 2200, "y": 7056 },
+                { "x": 2200, "y": 3024 }
+            ]
+        },
+
+        # --- HORIZONTAL CONNECTORS (Cross-streets) ---
+        # Tile 1:
         {
             "id": "playing-rd",
             "name": "Playing Rd",
             "type": "local",
             "points": [
-                { "x": 500, "y": 49400, "description": "Start at West City border" },
+                { "x": 500, "y": 49400, "description": "West limit" },
+                { "x": 800, "y": 49400, "description": "Cross Peace Ave" },
                 { "x": 1512, "y": 49400, "description": "Cross Mommy Ave freeway" },
-                { "x": 2000, "y": 49400, "description": "Cross Shila Ave" },
+                { "x": 2200, "y": 49400, "description": "Cross Shira Ave" },
                 { "x": 2800, "y": 49400, "description": "Connect to Channel Rd" }
             ]
         },
@@ -145,7 +311,8 @@ def generate_map_data():
             "type": "local",
             "points": [
                 { "x": 500, "y": 50200 },
-                { "x": 2000, "y": 50200 },
+                { "x": 800, "y": 50200 },
+                { "x": 2200, "y": 50200 },
                 { "x": 2800, "y": 50200 }
             ]
         },
@@ -155,8 +322,8 @@ def generate_map_data():
             "type": "local",
             "points": [
                 { "x": 2800, "y": 51408 },
-                { "x": 2800, "y": 50200, "description": "Intersection with Laughing St" },
-                { "x": 2800, "y": 49400, "description": "Intersection with Playing Rd" },
+                { "x": 2800, "y": 50200 },
+                { "x": 2800, "y": 49400 },
                 { "x": 2800, "y": 47376 }
             ]
         },
@@ -179,34 +346,16 @@ def generate_map_data():
             ]
         },
 
-        # --- TILE 2 LOCAL ROADS (Mommy City Grid) ---
-        {
-            "id": "peace-ave",
-            "name": "Peace Ave",
-            "type": "local",
-            "points": [
-                { "x": 600, "y": 47376 },
-                { "x": 600, "y": 45144, "description": "Cross Happy St" },
-                { "x": 600, "y": 43344 }
-            ]
-        },
-        {
-            "id": "ephraim-ave",
-            "name": "Ephraim Ave",
-            "type": "local",
-            "points": [
-                { "x": 2400, "y": 47376 },
-                { "x": 2400, "y": 45144, "description": "Cross Happy St" },
-                { "x": 2400, "y": 43344 }
-            ]
-        },
+        # Tile 2:
         {
             "id": "happy-st",
             "name": "Happy St",
             "type": "local",
             "points": [
                 { "x": 600, "y": 45144 },
+                { "x": 800, "y": 45144 },
                 { "x": 1512, "y": 45144, "description": "Junction with Mommy Ave" },
+                { "x": 2200, "y": 45144 },
                 { "x": 2400, "y": 45144 }
             ]
         },
@@ -216,163 +365,73 @@ def generate_map_data():
             "type": "local",
             "points": [
                 { "x": 1512, "y": 45144 },
-                { "x": 1512, "y": 43900, "description": "Head North to White House gates" }
+                { "x": 1512, "y": 43900 }
             ]
         },
 
-        # --- TILE 3 & 4 LOCAL ROADS (Tatty & Shobbos & Forest & River Roads) ---
-        {
-            "id": "tatty-ave",
-            "name": "Tatty Ave",
-            "type": "local",
-            "points": [
-                { "x": 800, "y": 43344 },
-                { "x": 800, "y": 39312 }
-            ]
-        },
-        {
-            "id": "shobbos-ave",
-            "name": "Shobbos Blvd",
-            "type": "local",
-            "points": [
-                { "x": 2200, "y": 43344 },
-                { "x": 2200, "y": 35280 }
-            ]
-        },
+        # Tile 3:
         {
             "id": "excursion-rd",
             "name": "Excursion Rd",
             "type": "local",
             "points": [
                 { "x": 200, "y": 41328 },
+                { "x": 800, "y": 41328 },
                 { "x": 1512, "y": 41328 },
                 { "x": 2200, "y": 41328 },
                 { "x": 2800, "y": 41328 }
             ]
         },
-        {
-            "id": "forest-ave",
-            "name": "Forest Ave",
-            "type": "local",
-            "points": [
-                { "x": 600, "y": 39312 },
-                { "x": 600, "y": 35280 }
-            ]
-        },
+
+        # Tile 4:
         {
             "id": "river-rd",
             "name": "River Rd",
             "type": "local",
             "points": [
                 { "x": 200, "y": 37280 },
+                { "x": 800, "y": 37280 },
                 { "x": 1512, "y": 37280 },
                 { "x": 2200, "y": 37280 },
                 { "x": 2800, "y": 37280 }
             ]
         },
 
-        # --- TILE 5 & 6 LOCAL ROADS (Jungle & Volcano Roads) ---
-        {
-            "id": "jungle-path",
-            "name": "Jungle Path",
-            "type": "local",
-            "points": [
-                { "x": 500, "y": 33264 },
-                { "x": 1512, "y": 32500 },
-                { "x": 2500, "y": 32000 }
-            ]
-        },
-        {
-            "id": "volcano-rd",
-            "name": "Volcano Rd",
-            "type": "local",
-            "points": [
-                { "x": 500, "y": 29216 },
-                { "x": 1512, "y": 28500 },
-                { "x": 2500, "y": 28000 }
-            ]
-        },
-
-        # --- TILE 7 LOCAL ROADS (Bridge & Study Grid) ---
-        {
-            "id": "internet-ave",
-            "name": "Internet Ave",
-            "type": "local",
-            "points": [
-                { "x": 2000, "y": 27216 },
-                { "x": 2000, "y": 23184 }
-            ]
-        },
-        {
-            "id": "misnoyos-ave",
-            "name": "Misnoyos Ave",
-            "type": "local",
-            "points": [
-                { "x": 800, "y": 27216 },
-                { "x": 800, "y": 23184 }
-            ]
-        },
+        # Tile 7:
         {
             "id": "chavrusa-ave",
             "name": "Chavrusa Ave",
             "type": "local",
             "points": [
                 { "x": 800, "y": 25184 },
-                { "x": 2000, "y": 25184 }
+                { "x": 1512, "y": 25184 },
+                { "x": 2200, "y": 25184 }
             ]
         },
 
-        # --- TILE 8 LOCAL ROADS (Yitzhok City Grid) ---
-        {
-            "id": "yitzhok-ave",
-            "name": "Yitzhok Ave",
-            "type": "local",
-            "points": [
-                { "x": 2200, "y": 23184 },
-                { "x": 2200, "y": 19152 }
-            ]
-        },
+        # Tile 8-1:
         {
             "id": "fun-st",
             "name": "Fun St",
             "type": "local",
             "points": [
                 { "x": 500, "y": 21100 },
+                { "x": 800, "y": 21100 },
                 { "x": 1512, "y": 21100 },
                 { "x": 2200, "y": 21100 }
             ]
         },
 
-        # --- TILE 9 LOCAL ROADS (Disney Area) ---
-        {
-            "id": "disney-st",
-            "name": "Disney St",
-            "type": "local",
-            "points": [
-                { "x": 1000, "y": 11088 },
-                { "x": 1000, "y": 7056 }
-            ]
-        },
-
-        # --- TILE 10 LOCAL ROADS (Park Village Area) ---
-        {
-            "id": "park-village-rd",
-            "name": "Park Village Rd",
-            "type": "local",
-            "points": [
-                { "x": 500, "y": 5000 },
-                { "x": 2500, "y": 5000 }
-            ]
-        },
-
-        # --- TILE 11/12 LOCAL ROADS (Rochelle Stadium Complex) ---
+        # --- TILE 11/12/13 LOCAL ROADS (Rochelle Stadium / North Complex) ---
         {
             "id": "toys-r-us-blvd",
             "name": "Toys R Us Blvd",
             "type": "local",
             "points": [
                 { "x": 500, "y": 2200 },
-                { "x": 1512, "y": 2200, "description": "Junction near Toys R Us" },
+                { "x": 800, "y": 2200 },
+                { "x": 1512, "y": 2200 },
+                { "x": 2200, "y": 2200 },
                 { "x": 3500, "y": 2200 }
             ]
         },
@@ -408,10 +467,18 @@ def generate_map_data():
             "icon": "Anchor"
         },
         {
-            "id": "shila-town",
-            "name": "City of Shila",
+            "id": "chana-rochel-city",
+            "name": "City of Chana Rochel",
+            "description": "A quiet residential community located south of Shira.",
+            "x": 2200,
+            "y": 50800,
+            "icon": "Home"
+        },
+        {
+            "id": "shira-town",
+            "name": "City of Shira",
             "description": "A bustling downtown grid with local stores, playing fields, and avenues.",
-            "x": 2000,
+            "x": 2200,
             "y": 49400,
             "icon": "School"
         },
@@ -485,7 +552,7 @@ def generate_map_data():
             "id": "em-station",
             "name": "EM Station",
             "description": "Ephraim Memorial Subway & Rail transit hub station.",
-            "x": 1000,
+            "x": 800,
             "y": 9000,
             "icon": "Train"
         },
