@@ -170,13 +170,13 @@ export default function VectorMapViewer({
         doubleClick={{ disabled: false }}
         wheel={{ step: 0.1 }}
       >
-        <TransformComponent wrapperClass="!w-full !h-full" contentClass="!w-full !h-full">
+        <TransformComponent wrapperClass="!w-full !h-full">
           <svg
             ref={svgRef}
             viewBox={`0 0 ${totalWidth} ${totalHeight}`}
             width={totalWidth}
             height={totalHeight}
-            className="w-full h-full origin-top-left"
+            className="origin-top-left max-w-none max-h-none"
           >
             {/* Sea Grid Background */}
             <rect width={totalWidth} height={totalHeight} fill="none" />
