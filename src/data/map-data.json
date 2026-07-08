@@ -1,0 +1,1614 @@
+{
+  "tiles": {
+    "1": {
+      "row": 1,
+      "col": 1,
+      "filename": "map-1.jpeg"
+    },
+    "2": {
+      "row": 2,
+      "col": 1,
+      "filename": "map-2.jpeg"
+    },
+    "3": {
+      "row": 3,
+      "col": 1,
+      "filename": "map-3.jpeg"
+    },
+    "4": {
+      "row": 4,
+      "col": 1,
+      "filename": "map-4.jpeg"
+    },
+    "5": {
+      "row": 5,
+      "col": 1,
+      "filename": "map-5.jpeg"
+    },
+    "6": {
+      "row": 6,
+      "col": 1,
+      "filename": "map-6.jpeg"
+    },
+    "7": {
+      "row": 7,
+      "col": 1,
+      "filename": "map-7.jpeg"
+    },
+    "8-1": {
+      "row": 8,
+      "col": 1,
+      "filename": "map-8-1.jpeg"
+    },
+    "8-2": {
+      "row": 9,
+      "col": 1,
+      "filename": "map-8-2.jpeg"
+    },
+    "8-3": {
+      "row": 10,
+      "col": 1,
+      "filename": "map-8-3.jpeg"
+    },
+    "9": {
+      "row": 11,
+      "col": 1,
+      "filename": "map-9.jpeg"
+    },
+    "10": {
+      "row": 12,
+      "col": 1,
+      "filename": "map-10.jpeg"
+    },
+    "11": {
+      "row": 13,
+      "col": 1,
+      "filename": "map-11.jpeg"
+    },
+    "12": {
+      "row": 13,
+      "col": 2,
+      "filename": "map-12.jpeg"
+    },
+    "13": {
+      "row": 13,
+      "col": 3,
+      "filename": "map-13.jpeg"
+    },
+    "14": {
+      "row": 13,
+      "col": 4,
+      "filename": "map-14.jpeg"
+    },
+    "15": {
+      "row": 13,
+      "col": 5,
+      "filename": "map-15.jpeg"
+    },
+    "16": {
+      "row": 13,
+      "col": 6,
+      "filename": "map-16.jpeg"
+    },
+    "17": {
+      "row": 13,
+      "col": 7,
+      "filename": "map-17.jpeg"
+    },
+    "18": {
+      "row": 13,
+      "col": 8,
+      "filename": "map-18.jpeg"
+    }
+  },
+  "landmasses": [
+    {
+      "id": "island-main",
+      "name": "Ephraim Island",
+      "points": [
+        {
+          "x": 394,
+          "y": 51000
+        },
+        {
+          "x": 73,
+          "y": 50000
+        },
+        {
+          "x": 130,
+          "y": 49000
+        },
+        {
+          "x": 77,
+          "y": 48000
+        },
+        {
+          "x": 394,
+          "y": 47000
+        },
+        {
+          "x": 256,
+          "y": 46000
+        },
+        {
+          "x": 211,
+          "y": 45000
+        },
+        {
+          "x": 7,
+          "y": 44000
+        },
+        {
+          "x": 181,
+          "y": 43000
+        },
+        {
+          "x": 302,
+          "y": 42000
+        },
+        {
+          "x": 325,
+          "y": 41000
+        },
+        {
+          "x": 176,
+          "y": 40000
+        },
+        {
+          "x": 21,
+          "y": 39000
+        },
+        {
+          "x": 188,
+          "y": 38000
+        },
+        {
+          "x": 259,
+          "y": 37000
+        },
+        {
+          "x": 392,
+          "y": 36000
+        },
+        {
+          "x": 93,
+          "y": 35000
+        },
+        {
+          "x": 129,
+          "y": 34000
+        },
+        {
+          "x": 61,
+          "y": 33000
+        },
+        {
+          "x": 390,
+          "y": 32000
+        },
+        {
+          "x": 254,
+          "y": 31000
+        },
+        {
+          "x": 239,
+          "y": 30000
+        },
+        {
+          "x": -8,
+          "y": 29000
+        },
+        {
+          "x": 185,
+          "y": 28000
+        },
+        {
+          "x": 272,
+          "y": 27000
+        },
+        {
+          "x": 354,
+          "y": 26000
+        },
+        {
+          "x": 169,
+          "y": 25000
+        },
+        {
+          "x": 43,
+          "y": 24000
+        },
+        {
+          "x": 156,
+          "y": 23000
+        },
+        {
+          "x": 266,
+          "y": 22000
+        },
+        {
+          "x": 385,
+          "y": 21000
+        },
+        {
+          "x": 119,
+          "y": 20000
+        },
+        {
+          "x": 123,
+          "y": 19000
+        },
+        {
+          "x": 51,
+          "y": 18000
+        },
+        {
+          "x": 380,
+          "y": 17000
+        },
+        {
+          "x": 257,
+          "y": 16000
+        },
+        {
+          "x": 262,
+          "y": 15000
+        },
+        {
+          "x": -18,
+          "y": 14000
+        },
+        {
+          "x": 187,
+          "y": 13000
+        },
+        {
+          "x": 244,
+          "y": 12000
+        },
+        {
+          "x": 379,
+          "y": 11000
+        },
+        {
+          "x": 163,
+          "y": 10000
+        },
+        {
+          "x": 68,
+          "y": 9000
+        },
+        {
+          "x": 122,
+          "y": 8000
+        },
+        {
+          "x": 275,
+          "y": 7000
+        },
+        {
+          "x": 373,
+          "y": 6000
+        },
+        {
+          "x": 150,
+          "y": 5000
+        },
+        {
+          "x": 114,
+          "y": 4000
+        },
+        {
+          "x": 48,
+          "y": 3000
+        },
+        {
+          "x": 363,
+          "y": 2000
+        },
+        {
+          "x": 263,
+          "y": 1000
+        },
+        {
+          "x": 200,
+          "y": 281
+        },
+        {
+          "x": 1200,
+          "y": 314
+        },
+        {
+          "x": 2200,
+          "y": 92
+        },
+        {
+          "x": 3200,
+          "y": 161
+        },
+        {
+          "x": 4200,
+          "y": 251
+        },
+        {
+          "x": 5200,
+          "y": 260
+        },
+        {
+          "x": 6200,
+          "y": 163
+        },
+        {
+          "x": 7200,
+          "y": 84
+        },
+        {
+          "x": 8200,
+          "y": 318
+        },
+        {
+          "x": 9200,
+          "y": 281
+        },
+        {
+          "x": 10200,
+          "y": 25
+        },
+        {
+          "x": 11200,
+          "y": 219
+        },
+        {
+          "x": 12200,
+          "y": 325
+        },
+        {
+          "x": 13200,
+          "y": 150
+        },
+        {
+          "x": 14200,
+          "y": 139
+        },
+        {
+          "x": 15200,
+          "y": 198
+        },
+        {
+          "x": 16200,
+          "y": 291
+        },
+        {
+          "x": 17200,
+          "y": 211
+        },
+        {
+          "x": 18200,
+          "y": 43
+        },
+        {
+          "x": 19200,
+          "y": 276
+        },
+        {
+          "x": 20200,
+          "y": 331
+        },
+        {
+          "x": 21200,
+          "y": 56
+        },
+        {
+          "x": 22200,
+          "y": 164
+        },
+        {
+          "x": 23200,
+          "y": 306
+        },
+        {
+          "x": 24200,
+          "y": 208
+        },
+        {
+          "x": 25200,
+          "y": 148
+        },
+        {
+          "x": 26200,
+          "y": 138
+        },
+        {
+          "x": 27200,
+          "y": 292
+        },
+        {
+          "x": 28200,
+          "y": 272
+        },
+        {
+          "x": 29200,
+          "y": 30
+        },
+        {
+          "x": 30200,
+          "y": 217
+        },
+        {
+          "x": 31200,
+          "y": 357
+        },
+        {
+          "x": 32047,
+          "y": 200
+        },
+        {
+          "x": 32098,
+          "y": 700
+        },
+        {
+          "x": 32014,
+          "y": 1200
+        },
+        {
+          "x": 31911,
+          "y": 1700
+        },
+        {
+          "x": 31930,
+          "y": 2200
+        },
+        {
+          "x": 32045,
+          "y": 2700
+        },
+        {
+          "x": 32000,
+          "y": 3328
+        },
+        {
+          "x": 31000,
+          "y": 3238
+        },
+        {
+          "x": 30000,
+          "y": 3083
+        },
+        {
+          "x": 29000,
+          "y": 3128
+        },
+        {
+          "x": 28000,
+          "y": 3296
+        },
+        {
+          "x": 27000,
+          "y": 3299
+        },
+        {
+          "x": 26000,
+          "y": 3132
+        },
+        {
+          "x": 25000,
+          "y": 3081
+        },
+        {
+          "x": 24000,
+          "y": 3234
+        },
+        {
+          "x": 23000,
+          "y": 3328
+        },
+        {
+          "x": 22000,
+          "y": 3201
+        },
+        {
+          "x": 21000,
+          "y": 3072
+        },
+        {
+          "x": 20000,
+          "y": 3162
+        },
+        {
+          "x": 19000,
+          "y": 3317
+        },
+        {
+          "x": 18000,
+          "y": 3271
+        },
+        {
+          "x": 17000,
+          "y": 3103
+        },
+        {
+          "x": 16000,
+          "y": 3101
+        },
+        {
+          "x": 15000,
+          "y": 3269
+        },
+        {
+          "x": 14000,
+          "y": 3318
+        },
+        {
+          "x": 13000,
+          "y": 3165
+        },
+        {
+          "x": 12000,
+          "y": 3072
+        },
+        {
+          "x": 11000,
+          "y": 3200
+        },
+        {
+          "x": 10000,
+          "y": 3328
+        },
+        {
+          "x": 9000,
+          "y": 3237
+        },
+        {
+          "x": 8000,
+          "y": 3082
+        },
+        {
+          "x": 7000,
+          "y": 3130
+        },
+        {
+          "x": 6000,
+          "y": 3297
+        },
+        {
+          "x": 5000,
+          "y": 3298
+        },
+        {
+          "x": 4000,
+          "y": 3130
+        },
+        {
+          "x": 3000,
+          "y": 3082
+        },
+        {
+          "x": 2740,
+          "y": 3200
+        },
+        {
+          "x": 2651,
+          "y": 4200
+        },
+        {
+          "x": 2728,
+          "y": 5200
+        },
+        {
+          "x": 2885,
+          "y": 6200
+        },
+        {
+          "x": 2948,
+          "y": 7200
+        },
+        {
+          "x": 2846,
+          "y": 8200
+        },
+        {
+          "x": 2693,
+          "y": 9200
+        },
+        {
+          "x": 2659,
+          "y": 10200
+        },
+        {
+          "x": 2782,
+          "y": 11200
+        },
+        {
+          "x": 2925,
+          "y": 12200
+        },
+        {
+          "x": 2929,
+          "y": 13200
+        },
+        {
+          "x": 2790,
+          "y": 14200
+        },
+        {
+          "x": 2662,
+          "y": 15200
+        },
+        {
+          "x": 2688,
+          "y": 16200
+        },
+        {
+          "x": 2838,
+          "y": 17200
+        },
+        {
+          "x": 2947,
+          "y": 18200
+        },
+        {
+          "x": 2891,
+          "y": 19200
+        },
+        {
+          "x": 2735,
+          "y": 20200
+        },
+        {
+          "x": 2651,
+          "y": 21200
+        },
+        {
+          "x": 2733,
+          "y": 22200
+        },
+        {
+          "x": 2890,
+          "y": 23200
+        },
+        {
+          "x": 2947,
+          "y": 24200
+        },
+        {
+          "x": 2840,
+          "y": 25200
+        },
+        {
+          "x": 2689,
+          "y": 26200
+        },
+        {
+          "x": 2661,
+          "y": 27200
+        },
+        {
+          "x": 2788,
+          "y": 28200
+        },
+        {
+          "x": 2928,
+          "y": 29200
+        },
+        {
+          "x": 2926,
+          "y": 30200
+        },
+        {
+          "x": 2784,
+          "y": 31200
+        },
+        {
+          "x": 2660,
+          "y": 32200
+        },
+        {
+          "x": 2692,
+          "y": 33200
+        },
+        {
+          "x": 2844,
+          "y": 34200
+        },
+        {
+          "x": 2948,
+          "y": 35200
+        },
+        {
+          "x": 2886,
+          "y": 36200
+        },
+        {
+          "x": 2730,
+          "y": 37200
+        },
+        {
+          "x": 2651,
+          "y": 38200
+        },
+        {
+          "x": 2738,
+          "y": 39200
+        },
+        {
+          "x": 2894,
+          "y": 40200
+        },
+        {
+          "x": 2946,
+          "y": 41200
+        },
+        {
+          "x": 2834,
+          "y": 42200
+        },
+        {
+          "x": 2685,
+          "y": 43200
+        },
+        {
+          "x": 2663,
+          "y": 44200
+        },
+        {
+          "x": 2794,
+          "y": 45200
+        },
+        {
+          "x": 2931,
+          "y": 46200
+        },
+        {
+          "x": 2923,
+          "y": 47200
+        },
+        {
+          "x": 2778,
+          "y": 48200
+        },
+        {
+          "x": 2658,
+          "y": 49200
+        },
+        {
+          "x": 2696,
+          "y": 50200
+        },
+        {
+          "x": 2800,
+          "y": 50921
+        },
+        {
+          "x": 2300,
+          "y": 51014
+        },
+        {
+          "x": 1800,
+          "y": 51076
+        },
+        {
+          "x": 1300,
+          "y": 50971
+        },
+        {
+          "x": 800,
+          "y": 50929
+        },
+        {
+          "x": 300,
+          "y": 51043
+        }
+      ]
+    }
+  ],
+  "roads": [
+    {
+      "id": "mommy-ave",
+      "name": "Mommy Ave (I-95)",
+      "type": "freeway",
+      "points": [
+        {
+          "x": 1512,
+          "y": 51408,
+          "description": "Mommy Ave entrance at South Harbor"
+        },
+        {
+          "x": 1512,
+          "y": 49400,
+          "description": "Pass Shila Town Center intersection"
+        },
+        {
+          "x": 1512,
+          "y": 47376,
+          "description": "Boundary Tile 1/2"
+        },
+        {
+          "x": 1512,
+          "y": 45144,
+          "description": "Exit 4: Happy St / Peace Ave"
+        },
+        {
+          "x": 1512,
+          "y": 43344,
+          "description": "Boundary Tile 2/3"
+        },
+        {
+          "x": 1512,
+          "y": 41328,
+          "description": "Exit 6: Tatty Ave / Shobbos Ave"
+        },
+        {
+          "x": 1512,
+          "y": 39312,
+          "description": "Boundary Tile 3/4"
+        },
+        {
+          "x": 1512,
+          "y": 37280,
+          "description": "Exit 8: River Road / Forest Route"
+        },
+        {
+          "x": 1512,
+          "y": 35280,
+          "description": "Boundary Tile 4/5"
+        },
+        {
+          "x": 1512,
+          "y": 33264,
+          "description": "Jungle Crossroads"
+        },
+        {
+          "x": 1512,
+          "y": 31248,
+          "description": "Boundary Tile 5/6"
+        },
+        {
+          "x": 1512,
+          "y": 29216,
+          "description": "Exit 10: Volcano Path"
+        },
+        {
+          "x": 1512,
+          "y": 27216,
+          "description": "Boundary Tile 6/7"
+        },
+        {
+          "x": 1512,
+          "y": 25184,
+          "description": "Exit 12: Midpoint Bridge"
+        },
+        {
+          "x": 1512,
+          "y": 23184,
+          "description": "Boundary Tile 7/8-1"
+        },
+        {
+          "x": 1512,
+          "y": 21100,
+          "description": "Exit 13: Yitzhok Ave / Playland"
+        },
+        {
+          "x": 1512,
+          "y": 19152,
+          "description": "Boundary Tile 8-1/8-2"
+        },
+        {
+          "x": 1512,
+          "y": 17136,
+          "description": "Exit 14: Fishing Area"
+        },
+        {
+          "x": 1512,
+          "y": 15120,
+          "description": "Boundary Tile 8-2/8-3"
+        },
+        {
+          "x": 1512,
+          "y": 11088,
+          "description": "Boundary Tile 8-3/9"
+        },
+        {
+          "x": 1512,
+          "y": 9072,
+          "description": "Exit 15: Disney St / EM Station"
+        },
+        {
+          "x": 1512,
+          "y": 7056,
+          "description": "Boundary Tile 9/10"
+        },
+        {
+          "x": 1512,
+          "y": 5000,
+          "description": "Exit 16: Park Village"
+        },
+        {
+          "x": 1512,
+          "y": 3024,
+          "description": "Boundary Tile 10/11"
+        },
+        {
+          "x": 1512,
+          "y": 1512,
+          "description": "At North Intersection (Exit 18), turn East (right)"
+        },
+        {
+          "x": 4032,
+          "y": 1512,
+          "description": "Boundary Tile 11/12"
+        },
+        {
+          "x": 6000,
+          "y": 1512,
+          "description": "Exit 19: Blomns Stadium"
+        },
+        {
+          "x": 8064,
+          "y": 1512,
+          "description": "Boundary Tile 12/13"
+        },
+        {
+          "x": 12096,
+          "y": 1512,
+          "description": "Boundary Tile 13/14"
+        },
+        {
+          "x": 16128,
+          "y": 1512,
+          "description": "Boundary Tile 14/15"
+        },
+        {
+          "x": 20160,
+          "y": 1512,
+          "description": "Boundary Tile 15/16"
+        },
+        {
+          "x": 24192,
+          "y": 1512,
+          "description": "Boundary Tile 16/17"
+        },
+        {
+          "x": 28224,
+          "y": 1512,
+          "description": "Boundary Tile 17/18"
+        },
+        {
+          "x": 30240,
+          "y": 1512,
+          "description": "Arrive at End Castle gates"
+        }
+      ]
+    },
+    {
+      "id": "shila-ave",
+      "name": "Shila Ave",
+      "type": "local",
+      "points": [
+        {
+          "x": 2000,
+          "y": 51408
+        },
+        {
+          "x": 2000,
+          "y": 49400,
+          "description": "Cross Playing Rd"
+        },
+        {
+          "x": 2000,
+          "y": 47376
+        }
+      ]
+    },
+    {
+      "id": "playing-rd",
+      "name": "Playing Rd",
+      "type": "local",
+      "points": [
+        {
+          "x": 500,
+          "y": 49400,
+          "description": "Start at West City border"
+        },
+        {
+          "x": 1512,
+          "y": 49400,
+          "description": "Cross Mommy Ave freeway"
+        },
+        {
+          "x": 2000,
+          "y": 49400,
+          "description": "Cross Shila Ave"
+        },
+        {
+          "x": 2800,
+          "y": 49400,
+          "description": "Connect to Channel Rd"
+        }
+      ]
+    },
+    {
+      "id": "laughing-st",
+      "name": "Laughing St",
+      "type": "local",
+      "points": [
+        {
+          "x": 500,
+          "y": 50200
+        },
+        {
+          "x": 2000,
+          "y": 50200
+        },
+        {
+          "x": 2800,
+          "y": 50200
+        }
+      ]
+    },
+    {
+      "id": "channel-rd",
+      "name": "Channel Rd",
+      "type": "local",
+      "points": [
+        {
+          "x": 2800,
+          "y": 51408
+        },
+        {
+          "x": 2800,
+          "y": 50200,
+          "description": "Intersection with Laughing St"
+        },
+        {
+          "x": 2800,
+          "y": 49400,
+          "description": "Intersection with Playing Rd"
+        },
+        {
+          "x": 2800,
+          "y": 47376
+        }
+      ]
+    },
+    {
+      "id": "silly-st",
+      "name": "Silly St",
+      "type": "local",
+      "points": [
+        {
+          "x": 1800,
+          "y": 50800
+        },
+        {
+          "x": 2800,
+          "y": 50800
+        }
+      ]
+    },
+    {
+      "id": "messy-st",
+      "name": "Messy St",
+      "type": "local",
+      "points": [
+        {
+          "x": 1800,
+          "y": 51200
+        },
+        {
+          "x": 2800,
+          "y": 51200
+        }
+      ]
+    },
+    {
+      "id": "peace-ave",
+      "name": "Peace Ave",
+      "type": "local",
+      "points": [
+        {
+          "x": 600,
+          "y": 47376
+        },
+        {
+          "x": 600,
+          "y": 45144,
+          "description": "Cross Happy St"
+        },
+        {
+          "x": 600,
+          "y": 43344
+        }
+      ]
+    },
+    {
+      "id": "ephraim-ave",
+      "name": "Ephraim Ave",
+      "type": "local",
+      "points": [
+        {
+          "x": 2400,
+          "y": 47376
+        },
+        {
+          "x": 2400,
+          "y": 45144,
+          "description": "Cross Happy St"
+        },
+        {
+          "x": 2400,
+          "y": 43344
+        }
+      ]
+    },
+    {
+      "id": "happy-st",
+      "name": "Happy St",
+      "type": "local",
+      "points": [
+        {
+          "x": 600,
+          "y": 45144
+        },
+        {
+          "x": 1512,
+          "y": 45144,
+          "description": "Junction with Mommy Ave"
+        },
+        {
+          "x": 2400,
+          "y": 45144
+        }
+      ]
+    },
+    {
+      "id": "white-house-loop",
+      "name": "White House Village Dr",
+      "type": "local",
+      "points": [
+        {
+          "x": 1512,
+          "y": 45144
+        },
+        {
+          "x": 1512,
+          "y": 43900,
+          "description": "Head North to White House gates"
+        }
+      ]
+    },
+    {
+      "id": "tatty-ave",
+      "name": "Tatty Ave",
+      "type": "local",
+      "points": [
+        {
+          "x": 800,
+          "y": 43344
+        },
+        {
+          "x": 800,
+          "y": 39312
+        }
+      ]
+    },
+    {
+      "id": "shobbos-ave",
+      "name": "Shobbos Blvd",
+      "type": "local",
+      "points": [
+        {
+          "x": 2200,
+          "y": 43344
+        },
+        {
+          "x": 2200,
+          "y": 35280
+        }
+      ]
+    },
+    {
+      "id": "excursion-rd",
+      "name": "Excursion Rd",
+      "type": "local",
+      "points": [
+        {
+          "x": 200,
+          "y": 41328
+        },
+        {
+          "x": 1512,
+          "y": 41328
+        },
+        {
+          "x": 2200,
+          "y": 41328
+        },
+        {
+          "x": 2800,
+          "y": 41328
+        }
+      ]
+    },
+    {
+      "id": "forest-ave",
+      "name": "Forest Ave",
+      "type": "local",
+      "points": [
+        {
+          "x": 600,
+          "y": 39312
+        },
+        {
+          "x": 600,
+          "y": 35280
+        }
+      ]
+    },
+    {
+      "id": "river-rd",
+      "name": "River Rd",
+      "type": "local",
+      "points": [
+        {
+          "x": 200,
+          "y": 37280
+        },
+        {
+          "x": 1512,
+          "y": 37280
+        },
+        {
+          "x": 2200,
+          "y": 37280
+        },
+        {
+          "x": 2800,
+          "y": 37280
+        }
+      ]
+    },
+    {
+      "id": "jungle-path",
+      "name": "Jungle Path",
+      "type": "local",
+      "points": [
+        {
+          "x": 500,
+          "y": 33264
+        },
+        {
+          "x": 1512,
+          "y": 32500
+        },
+        {
+          "x": 2500,
+          "y": 32000
+        }
+      ]
+    },
+    {
+      "id": "volcano-rd",
+      "name": "Volcano Rd",
+      "type": "local",
+      "points": [
+        {
+          "x": 500,
+          "y": 29216
+        },
+        {
+          "x": 1512,
+          "y": 28500
+        },
+        {
+          "x": 2500,
+          "y": 28000
+        }
+      ]
+    },
+    {
+      "id": "internet-ave",
+      "name": "Internet Ave",
+      "type": "local",
+      "points": [
+        {
+          "x": 2000,
+          "y": 27216
+        },
+        {
+          "x": 2000,
+          "y": 23184
+        }
+      ]
+    },
+    {
+      "id": "misnoyos-ave",
+      "name": "Misnoyos Ave",
+      "type": "local",
+      "points": [
+        {
+          "x": 800,
+          "y": 27216
+        },
+        {
+          "x": 800,
+          "y": 23184
+        }
+      ]
+    },
+    {
+      "id": "chavrusa-ave",
+      "name": "Chavrusa Ave",
+      "type": "local",
+      "points": [
+        {
+          "x": 800,
+          "y": 25184
+        },
+        {
+          "x": 2000,
+          "y": 25184
+        }
+      ]
+    },
+    {
+      "id": "yitzhok-ave",
+      "name": "Yitzhok Ave",
+      "type": "local",
+      "points": [
+        {
+          "x": 2200,
+          "y": 23184
+        },
+        {
+          "x": 2200,
+          "y": 19152
+        }
+      ]
+    },
+    {
+      "id": "fun-st",
+      "name": "Fun St",
+      "type": "local",
+      "points": [
+        {
+          "x": 500,
+          "y": 21100
+        },
+        {
+          "x": 1512,
+          "y": 21100
+        },
+        {
+          "x": 2200,
+          "y": 21100
+        }
+      ]
+    },
+    {
+      "id": "disney-st",
+      "name": "Disney St",
+      "type": "local",
+      "points": [
+        {
+          "x": 1000,
+          "y": 11088
+        },
+        {
+          "x": 1000,
+          "y": 7056
+        }
+      ]
+    },
+    {
+      "id": "park-village-rd",
+      "name": "Park Village Rd",
+      "type": "local",
+      "points": [
+        {
+          "x": 500,
+          "y": 5000
+        },
+        {
+          "x": 2500,
+          "y": 5000
+        }
+      ]
+    },
+    {
+      "id": "toys-r-us-blvd",
+      "name": "Toys R Us Blvd",
+      "type": "local",
+      "points": [
+        {
+          "x": 500,
+          "y": 2200
+        },
+        {
+          "x": 1512,
+          "y": 2200,
+          "description": "Junction near Toys R Us"
+        },
+        {
+          "x": 3500,
+          "y": 2200
+        }
+      ]
+    },
+    {
+      "id": "barrel-rd",
+      "name": "Barrel Rd",
+      "type": "local",
+      "points": [
+        {
+          "x": 1512,
+          "y": 500,
+          "description": "Entrance to Thomas Barrel Park"
+        },
+        {
+          "x": 1512,
+          "y": 1512,
+          "description": "Connect to Mommy Ave Freeway"
+        }
+      ]
+    },
+    {
+      "id": "stadium-way",
+      "name": "Stadium Way",
+      "type": "local",
+      "points": [
+        {
+          "x": 6000,
+          "y": 500,
+          "description": "Entrance to Blomns Stadium"
+        },
+        {
+          "x": 6000,
+          "y": 1512,
+          "description": "Connect to Mommy Ave Freeway Exit 19"
+        },
+        {
+          "x": 6000,
+          "y": 2500
+        }
+      ]
+    }
+  ],
+  "landmarks": [
+    {
+      "id": "south-harbor",
+      "name": "South Harbor",
+      "description": "The seaside fishing harbor at the very south end of Mommy Ave.",
+      "x": 1512,
+      "y": 51200,
+      "icon": "Anchor"
+    },
+    {
+      "id": "shila-town",
+      "name": "City of Shila",
+      "description": "A bustling downtown grid with local stores, playing fields, and avenues.",
+      "x": 2000,
+      "y": 49400,
+      "icon": "School"
+    },
+    {
+      "id": "white-house",
+      "name": "The White House",
+      "description": "A large mansion and gardens located at the top of White House Village Drive.",
+      "x": 1512,
+      "y": 43900,
+      "icon": "Home"
+    },
+    {
+      "id": "midpoint-bridge",
+      "name": "Midpoint Rope Bridge",
+      "description": "A wooden suspension bridge spanning a deep mountain canyon on Mommy Ave.",
+      "x": 1512,
+      "y": 25184,
+      "icon": "Route"
+    },
+    {
+      "id": "volcano-ridge",
+      "name": "Volcano Ridge",
+      "description": "Active volcano vents spitting steam, accessible via Volcano Road.",
+      "x": 1512,
+      "y": 28500,
+      "icon": "Mountain"
+    },
+    {
+      "id": "park-village",
+      "name": "Park Village",
+      "description": "A peaceful forest community surrounded by tall pine trees.",
+      "x": 1512,
+      "y": 5000,
+      "icon": "Tent"
+    },
+    {
+      "id": "playland",
+      "name": "Welcome to Disneyland",
+      "description": "Welcome to Disneyland! Entry gates and main parking area.",
+      "x": 800,
+      "y": 21100,
+      "icon": "Gamepad"
+    },
+    {
+      "id": "imax",
+      "name": "IMax Theater",
+      "description": "A massive screen movie theater showcasing educational and fun films.",
+      "x": 1200,
+      "y": 21100,
+      "icon": "Film"
+    },
+    {
+      "id": "spaceship",
+      "name": "Space Ship",
+      "description": "Interactive astronaut and space vehicle exhibit building.",
+      "x": 1600,
+      "y": 21100,
+      "icon": "Rocket"
+    },
+    {
+      "id": "city-of-yitzhok",
+      "name": "City of Yitzhok",
+      "description": "City of Yitzhok residential district and municipal offices.",
+      "x": 2200,
+      "y": 19500,
+      "icon": "Building"
+    },
+    {
+      "id": "em-station",
+      "name": "EM Station",
+      "description": "Ephraim Memorial Subway & Rail transit hub station.",
+      "x": 1000,
+      "y": 9000,
+      "icon": "Train"
+    },
+    {
+      "id": "chocolate-factory",
+      "name": "Chocolate Factory",
+      "description": "A delightful chocolate production facility with public tours.",
+      "x": 2200,
+      "y": 9000,
+      "icon": "Cookie"
+    },
+    {
+      "id": "obturnal-lake",
+      "name": "Obturnal Lake",
+      "description": "A beautiful deep blue lake suitable for fishing and boating recreation.",
+      "x": 2000,
+      "y": 9072,
+      "icon": "Compass"
+    },
+    {
+      "id": "thomas-barrelpark",
+      "name": "Thomas Barrel Park",
+      "description": "Located at the north end of Barrel Rd.",
+      "x": 1512,
+      "y": 500,
+      "icon": "Star"
+    },
+    {
+      "id": "toys-r-us",
+      "name": "Toys 'R' Us Mega Store",
+      "description": "A massive toy store at the corner of Toys R Us Blvd.",
+      "x": 1000,
+      "y": 2200,
+      "icon": "Coffee"
+    },
+    {
+      "id": "blomns-stadium",
+      "name": "Blomns Stadium",
+      "description": "The municipal stadium with parking, concession stands, and football field grids.",
+      "x": 6000,
+      "y": 500,
+      "icon": "Flag"
+    },
+    {
+      "id": "end-castle",
+      "name": "End Castle",
+      "description": "The majestic stone castle marking the eastern edge of the known world.",
+      "x": 30240,
+      "y": 1512,
+      "icon": "Castle"
+    }
+  ]
+}
