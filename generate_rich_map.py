@@ -25,42 +25,39 @@ def generate_map_data():
         "18": { "row": 13, "col": 8, "filename": "map-18.jpeg" }
     }
 
-    # Generate organic island shape by adding noise/wobble to the edges
-    # Column 1 height: 12 * 4032 = 48384 px
-    # Row 13 height: 3024 px
-    # Total height: 51408 px
-    # Total width: 32256 px
+    # Generate L-shaped island.
+    # Column 1 height: 12 * 4032 = 48384 px. Row 13 height: 3024 px. Total height: 51408 px.
+    # Row 13 width: 8 * 4032 = 32256 px.
     land_points = []
     
-    # Left edge (x ~ 200, going from bottom y=51000 to top y=200)
-    for y in range(51000, 200, -1000):
-        wobble = int(150 * math.sin(y / 800.0) + 80 * math.cos(y / 300.0))
-        land_points.append({"x": 200 + wobble, "y": y})
+    # Left edge (x ~ 100, going from bottom y=51200 to top y=100)
+    for y in range(51200, 100, -1000):
+        wobble = int(50 * math.sin(y / 800.0))
+        land_points.append({"x": 100 + wobble, "y": y})
         
-    # Top edge (y ~ 200, going from left x=200 to right x=32000)
-    for x in range(200, 32000, 1000):
-        wobble = int(120 * math.sin(x / 600.0) + 60 * math.cos(x / 250.0))
-        land_points.append({"x": x, "y": 200 + wobble})
+    # Top edge (y ~ 100, going from left x=100 to right x=32100)
+    for x in range(100, 32100, 1000):
+        wobble = int(40 * math.sin(x / 600.0))
+        land_points.append({"x": x, "y": 100 + wobble})
         
-    # Right edge at top (x ~ 32000, going down from y=200 to y=3200)
-    for y in range(200, 3200, 500):
-        wobble = int(100 * math.sin(y / 400.0))
-        land_points.append({"x": 32000 + wobble, "y": y})
+    # Right edge at top (x ~ 32100, going down from y=100 to y=2900)
+    for y in range(100, 2900, 500):
+        wobble = int(30 * math.sin(y / 400.0))
+        land_points.append({"x": 32100 + wobble, "y": y})
         
-    # Inner corner horizontal edge (y ~ 3200, going from right x=32000 to left x=2800)
-    for x in range(32000, 2800, -1000):
-        wobble = int(130 * math.sin(x / 700.0))
-        land_points.append({"x": x, "y": 3200 + wobble})
+    # Inner corner horizontal edge (y ~ 2900, going from right x=32100 to left x=2900)
+    for x in range(32100, 2900, -1000):
+        wobble = int(40 * math.sin(x / 700.0))
+        land_points.append({"x": x, "y": 2900 + wobble})
         
-    # Inner corner vertical edge (x ~ 2800, going down from y=3200 to y=51000)
-    for y in range(3200, 51000, 1000):
-        wobble = int(150 * math.sin(y / 900.0))
-        land_points.append({"x": 2800 + wobble, "y": y})
+    # Inner corner vertical edge (x ~ 2900, going down from y=2900 to y=51200)
+    for y in range(2900, 51200, 1000):
+        wobble = int(50 * math.sin(y / 900.0))
+        land_points.append({"x": 2900 + wobble, "y": y})
         
-    # Bottom edge (y ~ 51000, going from x=2800 to left x=200)
-    for x in range(2800, 200, -500):
-        wobble = int(80 * math.cos(x / 300.0))
-        land_points.append({"x": x, "y": 51000 + wobble})
+    # Bottom edge (y ~ 51200, going from x=2900 to left x=100)
+    for x in range(2900, 100, -500):
+        land_points.append({"x": x, "y": 51200})
 
     landmasses = [
         {
@@ -70,8 +67,9 @@ def generate_map_data():
         }
     ]
 
-    # Detailed Road Networks - aligned tile-by-tile in the new mixed grid layout!
+    # Detailed Road Networks - aligned tile-by-tile.
     # Consistent 3-corridor structure: Left corridor (x=800), Center Freeway (x=1512), Right corridor (x=2200)
+    # Note: Local roads start at Exit 1 (y=50200). Only Mommy Ave freeway runs south of Exit 1 to South Harbor port.
     roads = [
         # --- FREEWAY BACKBONE (Mommy Ave) ---
         # Starts bottom of Tile 1, runs North at x=1512 to Tile 11, then East at y=1512 to Tile 18
@@ -81,7 +79,7 @@ def generate_map_data():
             "type": "freeway",
             "points": [
                 { "x": 1512, "y": 51408, "description": "Mommy Ave entrance at South Harbor" },
-                { "x": 1512, "y": 50800, "description": "Exit 1: Chana Rochel" },
+                { "x": 1512, "y": 50200, "description": "Exit 1: Chana Rochel" },
                 { "x": 1512, "y": 49400, "description": "Exit 2: City of Shira" },
                 { "x": 1512, "y": 47376, "description": "Boundary Tile 1/2" },
                 { "x": 1512, "y": 46000, "description": "Exit 3: Peace Ave" },
@@ -123,13 +121,13 @@ def generate_map_data():
         },
 
         # --- LEFT CORRIDOR (Peace-Tatty-Misnoyos-Disney Corridor, x=800) ---
-        # Continuous road running north-south through the left side of the map
+        # Continuous road running north-south through the left side of the map (starts at Exit 1 y=50200)
         {
             "id": "left-corridor-1",
             "name": "Peace Ave",
             "type": "local",
             "points": [
-                { "x": 800, "y": 51408 },
+                { "x": 800, "y": 50200 },
                 { "x": 800, "y": 47376 },
                 { "x": 800, "y": 43344 }
             ]
@@ -199,13 +197,13 @@ def generate_map_data():
         },
 
         # --- RIGHT CORRIDOR (Chana Rochel-Shira-Ephraim-Shobbos-Internet-Yitzhok Corridor, x=2200) ---
-        # Continuous road running north-south through the right side of the map
+        # Note: Starts at Exit 1 y=50200 as Chana Rochel Ave
         {
             "id": "right-corridor-1a",
             "name": "Chana Rochel Ave",
             "type": "local",
             "points": [
-                { "x": 2200, "y": 51408 },
+                { "x": 2200, "y": 50200 },
                 { "x": 2200, "y": 49400 }
             ]
         },
@@ -291,18 +289,16 @@ def generate_map_data():
             ]
         },
 
-        # --- HORIZONTAL CONNECTORS (Cross-streets) ---
-        # Tile 1:
+        # --- HORIZONTAL CONNECTORS (Cross-streets in Map 1 grid, starting at y=50200) ---
         {
-            "id": "playing-rd",
-            "name": "Playing Rd",
+            "id": "messy-st",
+            "name": "Messy St",
             "type": "local",
             "points": [
-                { "x": 500, "y": 49400, "description": "West limit" },
-                { "x": 800, "y": 49400, "description": "Cross Peace Ave" },
-                { "x": 1512, "y": 49400, "description": "Cross Mommy Ave freeway" },
-                { "x": 2200, "y": 49400, "description": "Cross Shira Ave" },
-                { "x": 2800, "y": 49400, "description": "Connect to Channel Rd" }
+                { "x": 800, "y": 50200, "description": "West link on Peace Ave" },
+                { "x": 1512, "y": 50200, "description": "Junction with Mommy Ave Exit 1" },
+                { "x": 2200, "y": 50200, "description": "East link on Chana Rochel Ave" },
+                { "x": 2600, "y": 50200, "description": "Connect to Channel Rd" }
             ]
         },
         {
@@ -310,21 +306,9 @@ def generate_map_data():
             "name": "Laughing St",
             "type": "local",
             "points": [
-                { "x": 500, "y": 50200 },
-                { "x": 800, "y": 50200 },
-                { "x": 2200, "y": 50200 },
-                { "x": 2800, "y": 50200 }
-            ]
-        },
-        {
-            "id": "channel-rd",
-            "name": "Channel Rd",
-            "type": "local",
-            "points": [
-                { "x": 2800, "y": 51408 },
-                { "x": 2800, "y": 50200 },
-                { "x": 2800, "y": 49400 },
-                { "x": 2800, "y": 47376 }
+                { "x": 800, "y": 49800 },
+                { "x": 2200, "y": 49800 },
+                { "x": 2600, "y": 49800 }
             ]
         },
         {
@@ -332,17 +316,50 @@ def generate_map_data():
             "name": "Silly St",
             "type": "local",
             "points": [
-                { "x": 1800, "y": 50800 },
-                { "x": 2800, "y": 50800 }
+                { "x": 800, "y": 49400 },
+                { "x": 2200, "y": 49400 },
+                { "x": 2600, "y": 49400 }
             ]
         },
         {
-            "id": "messy-st",
-            "name": "Messy St",
+            "id": "playing-rd",
+            "name": "Playing Rd",
             "type": "local",
             "points": [
-                { "x": 1800, "y": 51200 },
-                { "x": 2800, "y": 51200 }
+                { "x": 400, "y": 49000 },
+                { "x": 800, "y": 49000 },
+                { "x": 1512, "y": 49000 },
+                { "x": 2200, "y": 49000 },
+                { "x": 2600, "y": 49000 }
+            ]
+        },
+        {
+            "id": "channel-rd",
+            "name": "Channel Rd",
+            "type": "local",
+            "points": [
+                { "x": 2600, "y": 50200 },
+                { "x": 2600, "y": 49800 },
+                { "x": 2600, "y": 49400 },
+                { "x": 2600, "y": 47376 }
+            ]
+        },
+        {
+            "id": "funny-st",
+            "name": "Funny St",
+            "type": "local",
+            "points": [
+                { "x": 2500, "y": 50200 },
+                { "x": 2500, "y": 49800 }
+            ]
+        },
+        {
+            "id": "crying-rd",
+            "name": "Crying Rd",
+            "type": "local",
+            "points": [
+                { "x": 1800, "y": 50200 },
+                { "x": 1800, "y": 49400 }
             ]
         },
 
@@ -375,11 +392,11 @@ def generate_map_data():
             "name": "Excursion Rd",
             "type": "local",
             "points": [
-                { "x": 200, "y": 41328 },
+                { "x": 400, "y": 41328 },
                 { "x": 800, "y": 41328 },
                 { "x": 1512, "y": 41328 },
                 { "x": 2200, "y": 41328 },
-                { "x": 2800, "y": 41328 }
+                { "x": 2600, "y": 41328 }
             ]
         },
 
@@ -389,11 +406,11 @@ def generate_map_data():
             "name": "River Rd",
             "type": "local",
             "points": [
-                { "x": 200, "y": 37280 },
+                { "x": 400, "y": 37280 },
                 { "x": 800, "y": 37280 },
                 { "x": 1512, "y": 37280 },
                 { "x": 2200, "y": 37280 },
-                { "x": 2800, "y": 37280 }
+                { "x": 2600, "y": 37280 }
             ]
         },
 
@@ -471,7 +488,7 @@ def generate_map_data():
             "name": "City of Chana Rochel",
             "description": "A quiet residential community located south of Shira.",
             "x": 2200,
-            "y": 50800,
+            "y": 50000,
             "icon": "Home"
         },
         {
@@ -479,7 +496,7 @@ def generate_map_data():
             "name": "City of Shira",
             "description": "A bustling downtown grid with local stores, playing fields, and avenues.",
             "x": 2200,
-            "y": 49400,
+            "y": 48500,
             "icon": "School"
         },
         {

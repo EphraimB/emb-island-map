@@ -88,6 +88,7 @@ export default function VectorMapViewer({
 }: VectorMapViewerProps) {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<L.Map | null>(null);
+  const imageOverlaysRef = useRef<L.ImageOverlay[]>([]);
   const [svgOverlayElement, setSvgOverlayElement] = useState<SVGSVGElement | null>(null);
 
   const totalWidth = 32256;
@@ -144,11 +145,40 @@ export default function VectorMapViewer({
     setSvgOverlayElement(svg);
 
     return () => {
+      imageOverlaysRef.current.forEach(ov => ov.remove());
+      imageOverlaysRef.current = [];
       map.remove();
       mapRef.current = null;
       setSvgOverlayElement(null);
     };
   }, []);
+
+  // Sync background JPEGs as native Leaflet image overlay layers (extremely snappy, hardware-accelerated)
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return;
+
+    // Remove existing image overlays
+    imageOverlaysRef.current.forEach(ov => ov.remove());
+    imageOverlaysRef.current = [];
+
+    if (showOriginals) {
+      Object.entries(mapData.tiles).forEach(([key, tile]) => {
+        const { x, y, width, height, isPortrait } = getTileGeometry(tile.row, tile.col);
+        const bounds: L.LatLngBoundsExpression = [
+          [-y - height, x],
+          [-y, x + width]
+        ];
+        const overlay = L.imageOverlay(`/maps/original/${tile.filename}`, bounds, {
+          className: isPortrait ? 'rotated-tile' : '',
+          opacity: 0.45,
+          interactive: false,
+        });
+        overlay.addTo(map);
+        imageOverlaysRef.current.push(overlay);
+      });
+    }
+  }, [showOriginals, mapData, svgOverlayElement]);
 
   // Programmatically pan and zoom when coordinates update (Search or Navigation Steps)
   useEffect(() => {
@@ -193,10 +223,23 @@ export default function VectorMapViewer({
 
   return (
     <div className="relative w-full h-full">
+      {/* Custom Styles for water background and correct tile rotations (90-deg counter-clockwise) */}
+      <style>{`
+        .leaflet-container {
+          background: #cadbfa !important;
+        }
+        .dark .leaflet-container {
+          background: #0f172a !important;
+        }
+        .rotated-tile {
+          transform: rotate(270deg) !important;
+        }
+      `}</style>
+
       {/* Leaflet Map Target */}
       <div 
         ref={mapContainerRef} 
-        className="w-full h-full bg-[#cadbfa] dark:bg-slate-900 transition-colors overflow-hidden select-none outline-none"
+        className="w-full h-full overflow-hidden select-none outline-none"
       />
 
       {/* Floating Zoom & Compass Controls */}
@@ -224,32 +267,11 @@ export default function VectorMapViewer({
         </button>
       </div>
 
-      {/* React Portal rendering SVG contents into the Leaflet overlay container */}
+      {/* React Portal rendering SVG vectors directly into the Leaflet overlay container */}
       {svgOverlayElement && createPortal(
         <>
           {/* Sea Grid Background */}
           <rect width={totalWidth} height={totalHeight} fill="none" />
-
-          {/* Render original drawings in the background with opacity */}
-          {showOriginals && Object.entries(mapData.tiles).map(([key, tile]) => {
-            const { x, y, isPortrait } = getTileGeometry(tile.row, tile.col);
-            return (
-              <image
-                key={key}
-                href={`/maps/original/${tile.filename}`}
-                x={0}
-                y={0}
-                width={4032}
-                height={3024}
-                transform={
-                  isPortrait
-                    ? `translate(${x + 3024}, ${y}) rotate(90)`
-                    : `translate(${x}, ${y})`
-                }
-                className="opacity-45 pointer-events-none will-change-transform"
-              />
-            );
-          })}
 
           {/* Landmass Vectors */}
           {mapData.landmasses.map((land) => (
@@ -328,7 +350,7 @@ export default function VectorMapViewer({
             </g>
           )}
 
-          {/* Floating Exit Signs above freeway junction points */}
+          {/* Floating Exit Signs above freeway junction points (scaled up for high visibility) */}
           {mapData.roads.flatMap(road => 
             road.points
               .filter(pt => pt.description && pt.description.toLowerCase().includes('exit'))
@@ -337,35 +359,35 @@ export default function VectorMapViewer({
                 if (!exitLabel) return null;
                 
                 return (
-                  <g key={`exit-${road.id}-${idx}`} transform={`translate(${pt.x}, ${pt.y - 250})`} className="pointer-events-none select-none">
+                  <g key={`exit-${road.id}-${idx}`} transform={`translate(${pt.x}, ${pt.y - 450})`} className="pointer-events-none select-none">
                     {/* Drop shadow indicator */}
                     <rect
-                      x="-150"
-                      y="-70"
-                      width="300"
-                      height="130"
-                      rx="16"
+                      x="-400"
+                      y="-180"
+                      width="800"
+                      height="320"
+                      rx="36"
                       fill="#000000"
                       opacity="0.15"
-                      transform="translate(10, 10)"
+                      transform="translate(20, 20)"
                     />
                     {/* Sign board */}
                     <rect
-                      x="-150"
-                      y="-70"
-                      width="300"
-                      height="130"
-                      rx="16"
+                      x="-400"
+                      y="-180"
+                      width="800"
+                      height="320"
+                      rx="36"
                       fill="#0f9d58"
                       stroke="#ffffff"
-                      strokeWidth="10"
+                      strokeWidth="15"
                     />
                     {/* Text label */}
                     <text
                       x="0"
-                      y="12"
+                      y="30"
                       textAnchor="middle"
-                      className="font-sans font-black text-[42px] fill-white"
+                      className="font-sans font-black text-[100px] fill-white"
                     >
                       {exitLabel}
                     </text>
